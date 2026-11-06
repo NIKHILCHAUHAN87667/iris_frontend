@@ -7,5 +7,15 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    preview: {
+    host: true,
+    port: Number(process.env.PORT) || 4173,
+    allowedHosts: ["iris-frontend-fbyb.onrender.com"],
+  },
+  server: {
+    host: true,
+    allowedHosts: ["iris-frontend-fbyb.onrender.com"],
+  },
+}
   ],
 })
